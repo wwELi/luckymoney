@@ -1,0 +1,10 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /lucky
+
+desc: 学习sping boot demo min：${limit.min} max：${limit.max}
+
+limit:
+  min: 20
+  max: 999

@@ -1,0 +1,27 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/luck_money?currentSchema=luck_service
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
+
+  flyway:
+    enabled: true
+    out-of-order: true
+    schemas: luck_service
+    placeholder-replacement: false
+    baseline-on-migrate: true
+    check-location: false
+    validate-on-migrate: false
+
+  profiles:
+    active: prod
